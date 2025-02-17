@@ -30,7 +30,7 @@
                         ValueChanged="Slider_ValueChanged"/>
 
                 <Label Text="Verde:"/>
-                <Slider x:Name="sldGren"
+                <Slider x:Name="sldGreen"
                         ThumbColor="{StaticResource Primary}"
                         MaximumTrackColor="{StaticResource Tertiary}"
                         MinimumTrackColor="{StaticResource Secondary}"
