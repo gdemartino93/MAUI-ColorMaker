@@ -52,7 +52,8 @@
                                      HeightRequest="25"
                                      Source="/Icons/copy.svg"
                                      VerticalOptions="Center"
-                                     WidthRequest="25"/>
+                                     WidthRequest="25"
+                                     Clicked="CopyImageButton_Clicked"/>
                     </HorizontalStackLayout>
                 </Frame>
 
