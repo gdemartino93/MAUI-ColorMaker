@@ -7,8 +7,59 @@
         <Color x:Key="Primary">#FE4A49</Color>
         <Color x:Key="Secondary">#2AB7CA</Color>
         <Color x:Key="Tertiary">#FED766</Color>
+        <Color x:Key="bg-main">#000000</Color>
     </ContentPage.Resources>
 
-    <Button BackgroundColor="{StaticResource Primary}"/>
+    <Grid x:Name="Container"
+          BackgroundColor="{StaticResource bg-main}">
+
+        <Frame Margin="10,0,10,0" 
+               VerticalOptions="Center">
+
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Label Text="Crea il tuo HEX"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Rosso:"/>
+                <Slider x:Name="sldRed"
+                        ThumbColor="{StaticResource Primary}"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"/>
+
+                <Label Text="Verde:"/>
+                <Slider x:Name="sldGren"
+                        ThumbColor="{StaticResource Primary}"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"/>
+
+                <Label Text="Blu:"/>
+                <Slider x:Name="sldBlue"
+                        ThumbColor="{StaticResource Primary}"
+                        MaximumTrackColor="{StaticResource Tertiary}"
+                        MinimumTrackColor="{StaticResource Secondary}"/>
+
+                <Frame CornerRadius="25" HorizontalOptions="Center">
+                    <HorizontalStackLayout>
+                        <Label x:Name="lblHexCode"
+                               HorizontalTextAlignment="Center"
+                               Text="HEX: #000000"/>
+                        <ImageButton Margin="10, 0, 0, 0"
+                                     HeightRequest="25"
+                                     Source="/Icons/copy.svg"
+                                     VerticalOptions="Center"
+                                     WidthRequest="25"/>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Button x:Name="btnRandom" 
+                        BackgroundColor="{StaticResource Primary}"
+                        Text="Genera un colore casuale" />
+
+            </VerticalStackLayout>
+        </Frame>
+        
+    </Grid>
 
 </ContentPage>
